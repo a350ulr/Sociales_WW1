@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>1a Guerra Mundial · Repàs 4t ESO</title>
+<style>
+:root{--bg:#f6f3ec;--card:#fff;--ink:#1f2430;--mut:#5b6170;--a:#8a1c1c;--b:#1f4e79;--c:#2e6b3a;--gold:#c99a2e;--line:#e2dccd}
+@media (prefers-color-scheme:dark){:root{--bg:#15171c;--card:#1f232b;--ink:#ece8de;--mut:#a4a9b5;--line:#343a46}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+button,[data-go],summary,.flash{touch-action:manipulation;-webkit-user-select:none;user-select:none}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px;padding-bottom:env(safe-area-inset-bottom)}
+header{background:linear-gradient(135deg,#3b2a1a,#7a1f1f);color:#fff;padding:calc(18px + env(safe-area-inset-top)) 18px 18px}
+header h1{margin:0;font-size:1.5rem}header p{margin:4px 0 0;opacity:.85;font-size:.95rem}
+nav{position:-webkit-sticky;position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line);display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:6px;padding:8px}
+nav button{flex:0 0 auto;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 14px;border-radius:22px;font-size:.95rem;min-height:44px;cursor:pointer}
+nav button.on{background:var(--a);color:#fff;border-color:var(--a)}
+main{max-width:1000px;margin:0 auto;padding:16px}
+section{display:none}section.on{display:block}
+h2{font-size:1.45rem;margin:.3em 0 .6em;border-left:6px solid var(--a);padding-left:10px}
+h3{font-size:1.15rem;margin:1.2em 0 .4em;color:var(--b)}
+@media (prefers-color-scheme:dark){h3{color:#8fbbe6}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.svgbox{background:#fff;border-radius:14px;padding:10px;margin:12px 0;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer}
+.tile b{display:block;font-size:1.1rem;margin-bottom:4px}
+.tA{border-top:6px solid var(--a)}.tB{border-top:6px solid var(--b)}.tC{border-top:6px solid var(--c)}.tD{border-top:6px solid var(--gold)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden}
+summary{padding:14px 16px;font-weight:600;cursor:pointer;min-height:44px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary:before{content:"▸ ";color:var(--a)}details[open] summary:before{content:"▾ "}
+details>div{padding:0 16px 14px}
+.key{background:#fff6dc;border-left:5px solid var(--gold);padding:10px 12px;border-radius:8px;margin:10px 0;color:#3a2f10}
+table{width:100%;border-collapse:collapse;font-size:.95rem}td,th{border:1px solid var(--line);padding:8px;vertical-align:top;text-align:left}th{background:var(--bg)}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch}
+svg{width:100%;height:auto;display:block}
+svg text{font-family:-apple-system,Helvetica,Arial,sans-serif}
+.tl{position:relative;padding-left:26px}.tl:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:4px;background:var(--line);border-radius:2px}
+.ev{position:relative;margin:0 0 12px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.ev:before{content:"";position:absolute;left:-23px;top:14px;width:14px;height:14px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+.ev.b:before{background:var(--b)}.ev.c:before{background:var(--c)}
+.ev .d{font-weight:700;color:var(--a)}
+.filt{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.filt button,.btn{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:10px 14px;border-radius:10px;font-size:.95rem;min-height:44px;cursor:pointer}
+.btn.p{background:var(--a);color:#fff;border-color:var(--a)}.filt button.on{background:var(--b);color:#fff}
+.q{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.q p{margin:0 0 8px;font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:1rem;min-height:44px;cursor:pointer;-webkit-appearance:none}
+.opt.ok{background:#d9f2df;border-color:#2e8b4a;color:#123}.opt.ko{background:#f8d7d3;border-color:#b03a2a;color:#311}
+.exp{font-size:.92rem;color:var(--mut);margin-top:6px;display:none}.exp.show{display:block}
+.bar{height:16px;background:var(--line);border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;width:0;transition:width .5s}
+.res{font-size:1.05rem}
+.flash{-webkit-perspective:900px;perspective:900px;height:190px;cursor:pointer;margin:10px 0}
+.fi{position:relative;width:100%;height:100%;transition:transform .5s;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}
+.flash.f .fi{-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
+.fs{position:absolute;top:0;left:0;right:0;bottom:0;-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:14px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font-size:1.1rem;border:1px solid var(--line)}
+.fr{background:var(--b);color:#fff;font-weight:700;font-size:1.3rem}.bk{background:var(--card);-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}
+.must li{margin:6px 0}
+.small{font-size:.88rem;color:var(--mut)}
+@media print{nav,.btn{display:none}section{display:block!important}}
+</style>
+</head>
+<body>
+<header><h1>🎖️ La 1a Guerra Mundial (1914-1918)</h1><p>Guia interactiva de repàs · Història del Món Contemporani · 4t ESO</p></header>
+<nav id="nav">
+<button type="button" data-s="inici" class="on">🏠 Inici</button>
+<button type="button" data-s="causes">A · Causes</button>
+<button type="button" data-s="fases">B · Fases</button>
+<button type="button" data-s="conseq">C · Conseqüències</button>
+<button type="button" data-s="crono">📅 Cronologia</button>
+<button type="button" data-s="pers">👤 Personatges</button>
+<button type="button" data-s="flash">🃏 Targetes</button>
+<button type="button" data-s="test">✅ Tests</button>
+<button type="button" data-s="ultim">⚡ Últim minut</button>
+</nav>
+<main>
+
+<section id="inici" class="on">
+<h2>Com fer servir aquesta guia</h2>
+<div class="card">1) Llegeix els blocs <b>A, B i C</b> (toca cada apartat per desplegar-lo). 2) Repassa la <b>cronologia</b> i els <b>personatges</b>. 3) Practica amb les <b>targetes</b>. 4) Fes els <b>tests</b>: t'indicaran el teu nivell de preparació. 5) Just abans de l'examen, llegeix <b>⚡ Últim minut</b>.</div>
+<div class="grid">
+<div class="tile tA" data-go="causes"><b>A · Causes</b>Actors polítics, causes estructurals, rivalitats, crisi de Sarajevo.</div>
+<div class="tile tB" data-go="fases"><b>B · Fases</b>Guerra de moviments (1914), de posicions (1915-16) i final (1917-18).</div>
+<div class="tile tC" data-go="conseq"><b>C · Conseqüències</b>Víctimes, tractats de pau, Societat de Nacions, llavor de l'odi.</div>
+<div class="tile tD" data-go="test"><b>✅ Avalua't</b>Tests per bloc + simulacre d'examen amb diagnòstic.</div>
+</div>
+<h3>Esquema general</h3>
+<div class="svgbox">
+<svg viewBox="0 0 900 260" role="img" aria-label="Esquema general">
+<rect x="10" y="20" width="260" height="220" rx="14" fill="#8a1c1c"/><text x="140" y="50" fill="#fff" font-size="20" text-anchor="middle" font-weight="700">A · CAUSES</text>
+<text x="25" y="85" fill="#fff" font-size="15">• Imperialisme colonial</text><text x="25" y="110" fill="#fff" font-size="15">• Nacionalismes (Balcans)</text><text x="25" y="135" fill="#fff" font-size="15">• Rivalitats econòmiques</text><text x="25" y="160" fill="#fff" font-size="15">• Blocs d'aliances</text><text x="25" y="185" fill="#fff" font-size="15">• Pau armada</text><text x="25" y="215" fill="#ffd" font-size="15" font-weight="700">⚡ Sarajevo 28-VI-1914</text>
+<rect x="320" y="20" width="260" height="220" rx="14" fill="#1f4e79"/><text x="450" y="50" fill="#fff" font-size="20" text-anchor="middle" font-weight="700">B · FASES</text>
+<text x="335" y="90" fill="#fff" font-size="15">1. Moviments (1914)</text><text x="350" y="112" fill="#cde" font-size="13">Pla Schlieffen · Marne</text>
+<text x="335" y="145" fill="#fff" font-size="15">2. Posicions (1915-16)</text><text x="350" y="167" fill="#cde" font-size="13">Trinxeres · Verdun · Somme</text>
+<text x="335" y="200" fill="#fff" font-size="15">3. Final (1917-18)</text><text x="350" y="222" fill="#cde" font-size="13">Rússia surt · EUA entren</text>
+<rect x="630" y="20" width="260" height="220" rx="14" fill="#2e6b3a"/><text x="760" y="50" fill="#fff" font-size="20" text-anchor="middle" font-weight="700">C · CONSEQÜÈNCIES</text>
+<text x="645" y="90" fill="#fff" font-size="15">• ~10 milions de morts</text><text x="645" y="118" fill="#fff" font-size="15">• Deute i inflació</text><text x="645" y="146" fill="#fff" font-size="15">• Tractat de Versalles</text><text x="645" y="174" fill="#fff" font-size="15">• Nou mapa d'Europa</text><text x="645" y="202" fill="#fff" font-size="15">• Societat de Nacions</text><text x="645" y="228" fill="#ffd" font-size="15" font-weight="700">• Llavor de la 2a GM</text>
+<polygon points="276,118 312,130 276,142" fill="#888"/><polygon points="586,118 622,130 586,142" fill="#888"/>
+</svg></div>
+<p class="small">Contingut elaborat a partir dels teus apunts (tema general i presentacions de Causes, Fases i Conseqüències). El progrés dels tests es desa al dispositiu si el navegador ho permet.</p>
+</section>
+
+<section id="causes">
+<h2>A · Les causes del conflicte</h2>
+<div class="key">🎯 <b>Idea clau:</b> la guerra té <b>causes estructurals</b> (econòmiques, polítiques, ideològiques), <b>causes immediates</b> (tres rivalitats) i un <b>detonant</b> (l'atemptat de Sarajevo). El sistema d'aliances convertí un conflicte local en una guerra general.</div>
+<h3>Context: dos fenòmens que desestabilitzen Europa des de 1870</h3>
+<div class="grid">
+<div class="card"><b>1. Naixement de l'Imperi alemany</b><br>Després de la victòria prussiana sobre França (1870-71). França perd <b>Alsàcia i Lorena</b> → antagonisme franco-alemany.</div>
+<div class="card"><b>2. Nacionalismes als Balcans</b><br>Dins l'Imperi turc en decadència. Neixen Sèrbia, Romania, Bulgària. Àustria-Hongria tem el contagi; Rússia dona suport als eslaus del sud (control dels estrets).</div>
+</div>
+<h3>1. Els actors polítics</h3>
+<details><summary>🇬🇧 Imperi britànic</summary><div><ul><li>Imperi més extens: ~20% de la població mundial (Austràlia, Nova Zelanda, Canadà, Índia).</li><li>Control de la ruta a l'Índia: Gibraltar, Malta, Suez. Àfrica de nord a sud.</li><li>Conflictes amb Rússia (Àsia), França i Alemanya (Àfrica).</li><li><b>Monarquia liberal</b> parlamentària (època victoriana). Lloyd George, primer ministre 1916-1922.</li></ul></div></details>
+<details><summary>🇫🇷 Imperi francès</summary><div><ul><li>2n imperi en importància. Àfrica d'oest a est (Algèria, Tunísia, Marroc, Senegal, Madagascar…) i Indoxina.</li><li><b>III República</b> liberal, sufragi universal masculí, separació Església-Estat; socialisme fort (Jean Jaurès).</li><li>Xoc amb Gran Bretanya a Àfrica (incident de <b>Fashoda, 1898</b>).</li></ul></div></details>
+<details><summary>🇩🇪 Imperi alemany</summary><div><ul><li><b>Bismarck</b> (fins 1890): hegemonia continental i <b>equilibri</b>; aïllar França (<i>Realpolitik</i>).</li><li><b>Guillem II</b>: hegemonia continental i mundial → <b>desequilibri</b> (<i>Weltpolitik</i>), gran armada.</li><li>Colònies: Tanganika, Togo, Camerun. Interès pel Marroc → xoc amb França.</li></ul></div></details>
+<details><summary>🇷🇺 Imperi rus</summary><div><ul><li>Imperi territorial: expansió dins el seu continent (Sibèria, Turquestan, Caucas).</li><li>Guerra russo-japonesa (1904-05): perd Manxúria.</li><li>Tsar <b>Nicolau II</b> (Romanov), govern autocràtic; després de la revolució de 1905 crea la <b>Duma</b>.</li><li>Política <b>paneslavista</b>: protegeix Sèrbia.</li></ul></div></details>
+<details><summary>🇦🇹🇭🇺 Imperi austrohongarès</summary><div><ul><li>Emperador <b>Francesc Josep I</b>, poder absolut; imperi dual des de 1867-68.</li><li>Sense colònies; greus problemes amb les nacionalitats que l'integren.</li><li>Vol aprofitar la descomposició otomana als Balcans. Annexiona <b>Bòsnia-Hercegovina (1908)</b>.</li></ul></div></details>
+<details><summary>🗺️ Tipus de colònies</summary><div><table><tr><th>Tipus</th><th>Exemple</th></tr><tr><td>Colònies d'explotació</td><td>Congo</td></tr><tr><td>Colònies de poblament</td><td>Austràlia, Nova Zelanda</td></tr><tr><td>Protectorats</td><td>Marroc, Egipte</td></tr></table></div></details>
+<h3>2. Causes estructurals</h3>
+<div class="tw"><table>
+<tr><th style="color:#8a1c1c">💰 Econòmiques</th><th style="color:#1f4e79">🏛️ Polítiques</th><th style="color:#2e6b3a">💭 Ideològiques</th></tr>
+<tr><td>Economia planetària que instrumentalitza l'estat-nació. Fi de l'hegemonia britànica i irrupció de noves economies (Alemanya). Necessitat de creixement continu. Competitivitat entre estats.</td>
+<td>Creixement econòmic il·limitat = poder polític il·limitat. Necessitat de nous territoris: <b>imperialisme</b>. Preponderància de l'exèrcit i <b>cursa d'armaments</b>. Desconfiança entre nacions.</td>
+<td><b>Nacionalisme imperialista</b> com a resposta a la crisi social. Règims autocràtics que disciplinen el poble amb l'enemic exterior. Fracàs dels moviments contra la guerra (AIT). Estats amb "missió històrica".</td></tr></table></div>
+<h3>Els dos blocs d'aliances</h3>
+<div class="svgbox">
+<svg viewBox="0 0 900 330" role="img" aria-label="Blocs d'aliances">
+<rect x="20" y="20" width="400" height="290" rx="16" fill="#f6dcd8" stroke="#b03a2a" stroke-width="3"/>
+<text x="220" y="52" text-anchor="middle" font-size="22" font-weight="700" fill="#b03a2a">TRIPLE ALIANÇA</text>
+<text x="220" y="76" text-anchor="middle" font-size="14" fill="#b03a2a">(Bismarck, 1879-1882) → Imperis Centrals</text>
+<line x1="172" y1="150" x2="268" y2="150" stroke="#333" stroke-width="4"/><text x="220" y="140" text-anchor="middle" font-size="13" fill="#333">1879</text>
+<circle cx="120" cy="150" r="52" fill="#555"/><text x="120" y="155" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Alemanya</text>
+<circle cx="320" cy="150" r="52" fill="#a33"/><text x="320" y="146" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Àustria-</text><text x="320" y="164" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Hongria</text>
+<circle cx="220" cy="250" r="44" fill="#999"/><text x="220" y="248" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Itàlia*</text><text x="220" y="266" text-anchor="middle" fill="#fff" font-size="11">1882</text>
+<text x="30" y="302" font-size="12" fill="#b03a2a">+ Imperi otomà (nov. 1914) i Bulgària (1915)</text>
+<rect x="480" y="20" width="400" height="290" rx="16" fill="#d8e6f4" stroke="#2a6fb0" stroke-width="3"/>
+<text x="680" y="52" text-anchor="middle" font-size="22" font-weight="700" fill="#2a6fb0">TRIPLE ENTESA</text>
+<text x="680" y="76" text-anchor="middle" font-size="14" fill="#2a6fb0">Aliats</text>
+<line x1="632" y1="150" x2="728" y2="150" stroke="#333" stroke-width="4"/><text x="680" y="140" text-anchor="middle" font-size="13" fill="#333">1892</text>
+<line x1="600" y1="198" x2="645" y2="222" stroke="#333" stroke-width="4"/><text x="585" y="228" font-size="13" fill="#333">1904</text>
+<line x1="760" y1="198" x2="715" y2="222" stroke="#333" stroke-width="4"/><text x="748" y="228" font-size="13" fill="#333">1907</text>
+<circle cx="580" cy="150" r="52" fill="#2a4f9a"/><text x="580" y="155" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">França</text>
+<circle cx="780" cy="150" r="52" fill="#3a7a3a"/><text x="780" y="155" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Rússia</text>
+<circle cx="680" cy="250" r="44" fill="#223"/><text x="680" y="246" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Regne</text><text x="680" y="264" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Unit</text>
+<text x="490" y="302" font-size="12" fill="#2a6fb0">+ Itàlia (1915), Romania (1916), EUA (1917)</text>
+</svg>
+<p class="small" style="color:#555">*Itàlia reclamava territoris italians d'Àustria-Hongria: neutral el 1914, entra amb l'Entesa el 1915.</p></div>
+<h3>3. Causes immediates: tres rivalitats</h3>
+<div class="grid">
+<div class="card tA"><b>① França ↔ Alemanya</b><br>Derrota de Sedan (1870) i pèrdua d'Alsàcia i Lorena. Alemanya encercla França amb aliances. <b>Pau armada</b>.</div>
+<div class="card tB"><b>② Alemanya ↔ Regne Unit</b><br>De la <i>Realpolitik</i> a la <i>Weltpolitik</i>; nova armada alemanya; competència pels mercats. GB crea l'Entesa amb França (1904) i Rússia (1907).</div>
+<div class="card tC"><b>③ Àustria-Hongria ↔ Rússia</b><br>Es disputen els Balcans en desfer-se l'Imperi otomà (guerres balcàniques 1912-13). Rússia paneslavista amb Sèrbia.</div>
+</div>
+<details><summary>⚠️ Crisis prèvies (1905-1913)</summary><div><ul><li>1905: 1a crisi marroquina (França-Alemanya).</li><li>1908: crisi balcànica per l'annexió austríaca de Bòsnia-Hercegovina.</li><li>1911: 2a crisi marroquina.</li><li>1912-1913: guerres balcàniques → fi de l'Imperi turc a Europa.</li></ul></div></details>
+<h3>4. La crisi de Sarajevo: l'efecte dominó</h3>
+<div class="svgbox">
+<svg viewBox="0 0 900 200" role="img" aria-label="Efecte dominó">
+<g stroke="#999" stroke-width="3"><line x1="110" y1="95" x2="130" y2="95"/><line x1="235" y1="95" x2="255" y2="95"/><line x1="360" y1="95" x2="380" y2="95"/><line x1="485" y1="95" x2="505" y2="95"/><line x1="610" y1="95" x2="630" y2="95"/><line x1="735" y1="95" x2="755" y2="95"/></g>
+<g font-size="13" text-anchor="middle">
+<rect x="5" y="40" width="105" height="110" rx="10" fill="#8a1c1c"/><text x="57" y="70" fill="#fff" font-weight="700">28 juny</text><text x="57" y="92" fill="#fff">Atemptat</text><text x="57" y="110" fill="#fff">Sarajevo</text><text x="57" y="130" fill="#fdd" font-size="11">G. Princip</text>
+<rect x="130" y="40" width="105" height="110" rx="10" fill="#a33"/><text x="182" y="70" fill="#fff" font-weight="700">23 juliol</text><text x="182" y="92" fill="#fff">Ultimàtum</text><text x="182" y="110" fill="#fff">austríac a</text><text x="182" y="128" fill="#fff">Sèrbia</text>
+<rect x="255" y="40" width="105" height="110" rx="10" fill="#b44"/><text x="307" y="70" fill="#fff" font-weight="700">28 juliol</text><text x="307" y="92" fill="#fff">Àustria</text><text x="307" y="110" fill="#fff">ataca</text><text x="307" y="128" fill="#fff">Sèrbia</text>
+<rect x="380" y="40" width="105" height="110" rx="10" fill="#3a7a3a"/><text x="432" y="70" fill="#fff" font-weight="700">29-30 jul.</text><text x="432" y="92" fill="#fff">Rússia</text><text x="432" y="110" fill="#fff">mobilitza</text>
+<rect x="505" y="40" width="105" height="110" rx="10" fill="#555"/><text x="557" y="70" fill="#fff" font-weight="700">1-4 agost</text><text x="557" y="92" fill="#fff">Alemanya</text><text x="557" y="110" fill="#fff">vs Rússia</text><text x="557" y="128" fill="#fff">i França</text>
+<rect x="630" y="40" width="105" height="110" rx="10" fill="#444"/><text x="682" y="70" fill="#fff" font-weight="700">agost</text><text x="682" y="92" fill="#fff">Invasió de</text><text x="682" y="110" fill="#fff">Bèlgica</text>
+<rect x="755" y="40" width="135" height="110" rx="10" fill="#223"/><text x="822" y="70" fill="#fff" font-weight="700">4-6 agost</text><text x="822" y="92" fill="#fff">Regne Unit</text><text x="822" y="110" fill="#fff">entra en</text><text x="822" y="128" fill="#fff">guerra</text>
+</g>
+<text x="450" y="185" text-anchor="middle" font-size="14" fill="#666">Nov. 1914: Turquia tanca els estrets i entra amb els Imperis Centrals · Itàlia, neutral</text>
+</svg></div>
+<div class="card"><ul><li>Víctima: l'<b>arxiduc Francesc Ferran</b>, hereu d'Àustria-Hongria. Autor: <b>Gavrilo Princip</b>, nacionalista serbi.</li>
+<li>Àustria veu l'ocasió d'afirmar la seva hegemonia als Balcans, amb el suport del Kàiser.</li>
+<li>Les poblacions no s'hi oposen: <b>"Unions Sagrades"</b> (els socialistes donen suport a la guerra) → el nacionalisme s'imposa a la consciència de classe.</li></ul></div>
+</section>
+
+<section id="fases">
+<h2>B · Les fases de la guerra</h2>
+<div class="key">🎯 <b>Idea clau:</b> tothom esperava una guerra curta. El fracàs del pla Schlieffen la convertí en una <b>guerra de desgast</b> a les trinxeres. El 1917 (revolució russa + entrada dels EUA) canvia l'equilibri i l'Entesa guanya el 1918.</div>
+<div class="svgbox">
+<svg viewBox="0 0 900 120" role="img" aria-label="Fases">
+<rect x="0" y="30" width="180" height="60" fill="#e8a33a"/><text x="90" y="58" text-anchor="middle" font-size="15" font-weight="700">1. MOVIMENTS</text><text x="90" y="78" text-anchor="middle" font-size="13">1914</text>
+<rect x="180" y="30" width="460" height="60" fill="#7fb24a"/><text x="410" y="58" text-anchor="middle" font-size="15" font-weight="700">2. POSICIONS / TRINXERES</text><text x="410" y="78" text-anchor="middle" font-size="13">1915 – 1916</text>
+<rect x="640" y="30" width="260" height="60" fill="#e0703a"/><text x="770" y="58" text-anchor="middle" font-size="15" font-weight="700">3. FINAL</text><text x="770" y="78" text-anchor="middle" font-size="13">1917 – 1918</text>
+<text x="2" y="20" font-size="12" fill="#666">Juny 1914</text><text x="898" y="20" font-size="12" fill="#666" text-anchor="end">11 nov. 1918</text>
+<text x="90" y="110" text-anchor="middle" font-size="12" fill="#666">Marne · Tannenberg</text><text x="410" y="110" text-anchor="middle" font-size="12" fill="#666">Verdun · Somme · Jutlàndia</text><text x="770" y="110" text-anchor="middle" font-size="12" fill="#666">Brest-Litovsk · Armistici</text>
+</svg></div>
+<h3>1. Guerra de moviments (estiu-hivern 1914)</h3>
+<details open><summary>El pla Schlieffen i el seu fracàs</summary><div><ul>
+<li><b>Objectiu:</b> evitar lluitar en dos fronts, aprofitant la lentitud de la mobilització russa per derrotar França ràpidament.</li>
+<li><b>Mètode:</b> invadir <b>Bèlgica</b> (neutral) i agafar l'exèrcit francès per la reraguarda → provocà l'entrada del Regne Unit.</li>
+<li><b>Fracàs:</b> <b>batalla del Marne</b> (setembre 1914): França resisteix i el front occidental s'estabilitza.</li>
+<li><b>Front oriental:</b> <b>Tannenberg</b> (agost 1914): Alemanya derrota el 2n exèrcit rus (~90.000 presoners). Hindenburg i Ludendorff, herois.</li>
+<li>Mobilització de la població: allistament voluntari britànic (<i>Kitchener Army</i>, cartell "Britons wants you").</li></ul></div></details>
+<h3>2. Guerra de posicions (1915-1916)</h3>
+<details><summary>🕳️ Les trinxeres</summary><div>
+<div class="svgbox"><svg viewBox="0 0 900 230" role="img" aria-label="Esquema de trinxeres">
+<rect x="0" y="0" width="900" height="110" fill="#cfe3f2"/><rect x="0" y="110" width="900" height="120" fill="#8b6b45"/>
+<rect x="40" y="110" width="40" height="70" fill="#3d2b18"/><rect x="140" y="110" width="40" height="70" fill="#3d2b18"/><rect x="240" y="110" width="40" height="80" fill="#3d2b18"/>
+<text x="60" y="212" text-anchor="middle" font-size="12" fill="#fff">Reserva</text><text x="160" y="212" text-anchor="middle" font-size="12" fill="#fff">Suport</text><text x="260" y="212" text-anchor="middle" font-size="12" fill="#fff">1a línia</text>
+<path d="M300 105 l20 -12 l20 12 l20 -12 l20 12" stroke="#333" fill="none" stroke-width="2"/><text x="340" y="85" text-anchor="middle" font-size="12">Filferro</text>
+<text x="450" y="165" text-anchor="middle" font-size="18" fill="#fff" font-weight="700">TERRA DE NINGÚ</text>
+<circle cx="420" cy="115" r="12" fill="#5a4026"/><circle cx="490" cy="118" r="9" fill="#5a4026"/>
+<path d="M520 105 l20 -12 l20 12 l20 -12 l20 12" stroke="#333" fill="none" stroke-width="2"/>
+<rect x="620" y="110" width="40" height="80" fill="#3d2b18"/><rect x="720" y="110" width="40" height="70" fill="#3d2b18"/><rect x="820" y="110" width="40" height="70" fill="#3d2b18"/>
+<text x="640" y="212" text-anchor="middle" font-size="12" fill="#fff">1a línia</text>
+<text x="150" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#2a6fb0">ALIATS</text><text x="750" y="40" text-anchor="middle" font-size="16" font-weight="700" fill="#b03a2a">ALEMANYS</text>
+<text x="450" y="40" text-anchor="middle" font-size="13">💥 artilleria · metralladores · gas</text>
+</svg></div>
+<ul><li>Des de l'hivern de 1914: fronts fortificats impossibles de trencar.</li><li><b>Teoria del desgast</b>: esgotar els recursos humans i materials de l'enemic.</li><li>Vida: fang, rates, malalties, por; parapet, escaló de tir, periscopi.</li></ul></div></details>
+<details><summary>🔫 Les noves armes</summary><div><ul><li><b>Metralladores</b> i artilleria pesant (obusos).</li><li><b>Gas tòxic</b> (màscares antigàs).</li><li><b>Tancs</b> (primera aparició).</li><li><b>Avions</b> (reconeixement i combat).</li><li><b>Submarins</b> (guerra submarina alemanya).</li></ul></div></details>
+<details><summary>⚔️ Les grans batalles</summary><div><div class="tw"><table>
+<tr><th>Batalla</th><th>Data</th><th>Claus</th></tr>
+<tr><td><b>Tannenberg</b></td><td>agost 1914</td><td>Victòria alemanya al front oriental; 90.000 presoners russos.</td></tr>
+<tr><td><b>Marne</b></td><td>setembre 1914</td><td>Atura l'avanç alemany; fracàs del pla Schlieffen.</td></tr>
+<tr><td><b>Verdun</b></td><td>febrer-desembre 1916</td><td>Falkenhayn: desgast humà en un lloc simbòlic. 2,5 milions d'obusos. Resistència francesa (Pétain).</td></tr>
+<tr><td><b>Somme</b></td><td>juliol-novembre 1916</td><td>Haig: 1,5 milions d'obusos; el 1r dia, ~19.000 morts britànics. Avanç de 10 km per més d'1 milió de baixes.</td></tr>
+<tr><td><b>Jutlàndia</b></td><td>1916</td><td>Gran batalla naval; es manté el bloqueig britànic.</td></tr></table></div></div></details>
+<details><summary>🏭 La reraguarda: economia de guerra</summary><div><ul><li>Guerra de material (industrial): calia produir armament massivament.</li><li><b>Intervenció de l'Estat</b> en l'economia (contra el liberalisme).</li><li><b>Incorporació de la dona</b> a la indústria → emancipació femenina.</li><li><b>Bloqueig marítim</b> de l'Entesa → racionament a Alemanya. Resposta: <b>guerra submarina</b> (enfonsament del <i>Lusitania</i>, 1915).</li><li>Censura de premsa i cartes; exaltació nacionalista.</li></ul></div></details>
+<details><summary>📢 Propaganda i 🕊️ pacifisme</summary><div><ul><li><b>Propaganda</b>: cartells sobre masculinitat (soldat heroi), feminitat (mare, infermera, obrera) i infància.</li><li><b>Pacifisme</b>: conferència de <b>Zimmerwald</b> (1915) — pau "blanca" sense annexions ni indemnitzacions. Lenin: la guerra pot portar la revolució.</li><li>Opositors: Karl Liebknecht (Lliga espartaquista), Bertrand Russell, Romain Rolland.</li></ul></div></details>
+<details><summary>🌍 Nous fronts i nous aliats</summary><div><ul><li>Itàlia entra amb l'Entesa (1915) → front dels Alps.</li><li>Bulgària s'uneix als Imperis Centrals (1915). Romania, a l'Entesa (1916).</li><li>La guerra europea esdevé <b>mundial</b>: colònies, Orient Mitjà, mars.</li></ul></div></details>
+<h3>3. El final de la guerra (1917-1918)</h3>
+<div class="grid">
+<div class="card tA"><b>🇷🇺 1917: Revolució russa</b><br>Febrer: cau el tsarisme. Octubre: triomf bolxevic → pau de <b>Brest-Litovsk</b> (març 1918). Fi del front oriental.</div>
+<div class="card tB"><b>🇺🇸 Abril 1917: entren els EUA</b><br>Causa principal: la <b>guerra submarina</b> alemanya. Aporten soldats, diners i indústria. Gener 1918: <b>14 punts de Wilson</b>.</div>
+<div class="card tC"><b>⚔️ 1918: ofensiva final</b><br>Març-juliol: <b>Batalla del Kàiser</b> (Kaiserschlacht), última ofensiva alemanya, fracassa. L'Entesa contraataca.</div>
+<div class="card tD"><b>🏳️ Rendicions</b><br>Bulgària i Turquia (oct.), Àustria-Hongria (3 nov.). Revolució a Alemanya: Guillem II abdica (9 nov.) → República → <b>Armistici 11 nov. 1918</b> (vagó de Compiègne).</div>
+</div>
+</section>
+
+<section id="conseq">
+<h2>C · Les conseqüències del conflicte</h2>
+<div class="key">🎯 <b>Idea clau:</b> una pau mal resolta. Versalles humilia Alemanya, el nou mapa crea minories nacionals i la Societat de Nacions neix feble → <b>"llavor de l'odi"</b> que esclatarà el 1939.</div>
+<h3>1. Víctimes i balanç</h3>
+<div class="svgbox">
+<svg viewBox="0 0 900 210" role="img" aria-label="Balanç">
+<g font-size="15"><text x="10" y="37" font-weight="700" fill="#222">Demogràfiques</text><rect x="170" y="18" width="720" height="28" rx="6" fill="#8a1c1c"/><text x="182" y="38" fill="#fff">~10 milions de morts · 1/5 dels homes de 20-40 anys (França, Alemanya)</text>
+<text x="10" y="87" font-weight="700" fill="#222">Econòmiques</text><rect x="170" y="68" width="720" height="28" rx="6" fill="#1f4e79"/><text x="182" y="88" fill="#fff">Endeutament · emissió de moneda → inflació · destrucció industrial</text>
+<text x="10" y="137" font-weight="700" fill="#222">Socials</text><rect x="170" y="118" width="720" height="28" rx="6" fill="#2e6b3a"/><text x="182" y="138" fill="#fff">Baixa el nivell de vida · malestar social · emancipació femenina</text>
+<text x="10" y="187" font-weight="700" fill="#222">Polítiques</text><rect x="170" y="168" width="720" height="28" rx="6" fill="#a57c1f"/><text x="182" y="188" fill="#fff">Ampliació del sufragi (vot femení) · declivi d'Europa · EUA 1a potència</text></g>
+</svg>
+<p class="small" style="color:#555">Zones més destruïdes: nord de França, Bèlgica, Polònia, Bielorússia i els Balcans. Reivindicacions obreres com la jornada de 8 hores.</p></div>
+<h3>2. Els tractats de pau</h3>
+<details open><summary>Conferència de París (gener 1919)</summary><div><div class="tw">
+<table><tr><th>País</th><th>Líder</th><th>Postura</th></tr>
+<tr><td>🇺🇸 EUA</td><td><b>Woodrow Wilson</b></td><td>Evitar la venjança, lliure mercat, autodeterminació, Societat de Nacions (14 punts)</td></tr>
+<tr><td>🇫🇷 França</td><td><b>Georges Clemenceau</b></td><td>Culpar exclusivament Alemanya i exigir compensacions econòmiques i territorials</td></tr>
+<tr><td>🇬🇧 Regne Unit</td><td><b>Lloyd George</b></td><td>Equilibra la balança</td></tr>
+<tr><td>🇮🇹 Itàlia</td><td><b>Orlando</b></td><td>Reclamacions territorials</td></tr></table></div>
+<p class="small">Els vençuts no hi van negociar: la pau va ser imposada.</p></div></details>
+<div class="grid">
+<div class="card tA"><b>📜 Tractat de Versalles (28-VI-1919) – Alemanya</b><ul><li>Alsàcia i Lorena tornen a França.</li><li>Eupen i Malmédy a Bèlgica; Slesvig del nord a Dinamarca.</li><li><b>Corredor de Danzig</b> per a Polònia (separa la Prússia oriental).</li><li>Perd <b>totes les colònies</b>.</li><li><b>Clàusula de culpabilitat</b> → reparacions de guerra.</li><li>Desmilitarització de Renània; Saar en plebiscit (15 anys); entrega de la flota.</li></ul></div>
+<div class="card tB"><b>📜 Tractat de Saint-Germain (set. 1919) – Àustria</b><ul><li>Dissolució de l'Imperi austrohongarès.</li><li>Àustria i Hongria, estats separats i <b>sense sortida al mar</b>.</li><li>Neixen Txecoslovàquia i <b>Iugoslàvia</b> (Sèrbia + Croàcia, Eslovènia, Montenegro…).</li><li>Itàlia annexiona Trieste i Ístria.</li></ul></div>
+<div class="card tC"><b>🗺️ Altres canvis</b><ul><li>Es desfà l'Imperi otomà; Bulgària perd la costa de l'Egeu.</li><li>De l'Imperi rus: Finlàndia, Estònia, Letònia, Lituània, Polònia.</li><li>Triomf (incomplet) del <b>principi de les nacionalitats</b> → minories nacionals.</li></ul></div>
+</div>
+<h3>Imperis que desapareixen</h3>
+<div class="svgbox"><svg viewBox="0 0 900 140" role="img" aria-label="Imperis desapareguts">
+<g font-size="15" text-anchor="middle" font-weight="700">
+<rect x="10" y="20" width="200" height="100" rx="12" fill="#555"/><text x="110" y="62" fill="#fff">Imperi alemany</text><text x="110" y="88" fill="#ddd" font-size="12" font-weight="400">→ República</text>
+<rect x="235" y="20" width="200" height="100" rx="12" fill="#a33"/><text x="335" y="62" fill="#fff">Àustria-Hongria</text><text x="335" y="88" fill="#fdd" font-size="12" font-weight="400">→ nous estats</text>
+<rect x="460" y="20" width="200" height="100" rx="12" fill="#3a7a3a"/><text x="560" y="62" fill="#fff">Imperi rus</text><text x="560" y="88" fill="#dfd" font-size="12" font-weight="400">→ Rússia soviètica</text>
+<rect x="685" y="20" width="200" height="100" rx="12" fill="#b07a2a"/><text x="785" y="62" fill="#fff">Imperi otomà</text><text x="785" y="88" fill="#ffe" font-size="12" font-weight="400">→ Turquia</text></g></svg></div>
+<h3>3. Un nou ordre mundial: la Societat de Nacions</h3>
+<div class="card"><ul><li>Proposta de <b>Wilson</b>; objectiu: resoldre els conflictes pacíficament.</li><li><b>Febleses:</b> els <b>EUA no hi entren</b> (aïllacionisme), sense exèrcit propi, inicialment sense Alemanya ni la Rússia soviètica.</li></ul></div>
+<h3>4. La llavor de l'odi</h3>
+<div class="card"><ul><li>Alemanya considera Versalles una imposició → esperit <b>revisionista</b>.</li><li>Fronteres mal resoltes (Danzig, Fiume) i minories nacionals.</li><li>Símbol: el <b>vagó de Compiègne</b> — on Alemanya signà l'armistici el 1918 i on Hitler obligà França a rendir-se el 1940.</li><li>Conclusió: la pau porta en si mateixa els conflictes que esclataran el <b>1939</b>.</li></ul></div>
+</section>
+
+<section id="crono">
+<h2>📅 Cronologia interactiva</h2>
+<div class="filt" id="cf"><button type="button" data-f="all" class="on">Tot</button><button type="button" data-f="a">Causes</button><button type="button" data-f="b">Guerra</button><button type="button" data-f="c">Pau</button></div>
+<div class="tl" id="tl"></div>
+</section>
+
+<section id="pers">
+<h2>👤 Personatges i conceptes clau</h2>
+<h3>Personatges</h3><div class="tw"><table id="tp"></table></div>
+<h3>Glossari</h3><div class="tw"><table id="tg"></table></div>
+</section>
+
+<section id="flash">
+<h2>🃏 Targetes de memòria</h2>
+<p>Toca la targeta per girar-la.</p>
+<div class="flash" id="fc"><div class="fi"><div class="fs fr" id="ff"></div><div class="fs bk" id="fb"></div></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap"><button type="button" class="btn" id="fprev">◀ Anterior</button><button type="button" class="btn p" id="fnext">Següent ▶</button><button type="button" class="btn" id="fsh">🔀 Barreja</button><span id="fn" class="small" style="align-self:center"></span></div>
+</section>
+
+<section id="test">
+<h2>✅ Autoavaluació</h2>
+<div class="card"><b>El teu nivell de preparació</b><div id="lvl" style="margin-top:8px"></div></div>
+<div class="filt"><button type="button" class="btn" data-q="a">Test A · Causes</button><button type="button" class="btn" data-q="b">Test B · Fases</button><button type="button" class="btn" data-q="c">Test C · Conseqüències</button><button type="button" class="btn p" data-q="x">🎓 Simulacre d'examen (20)</button></div>
+<div id="qz"></div>
+</section>
+
+<section id="ultim">
+<h2>⚡ Imprescindibles per recordar abans de l'examen</h2>
+<div class="card must"><h3>🔢 Les 10 dates</h3><ol>
+<li><b>1870-71</b> Guerra francoprussiana → Alemanya s'endú Alsàcia i Lorena.</li>
+<li><b>1882 / 1907</b> Triple Aliança / Triple Entesa completa.</li>
+<li><b>28 juny 1914</b> Atemptat de Sarajevo.</li>
+<li><b>28 juliol 1914</b> Àustria declara la guerra a Sèrbia.</li>
+<li><b>Setembre 1914</b> Batalla del Marne.</li>
+<li><b>1916</b> Verdun i el Somme.</li>
+<li><b>1917</b> Revolució russa + entrada dels EUA (abril).</li>
+<li><b>Març 1918</b> Brest-Litovsk.</li>
+<li><b>11 novembre 1918</b> Armistici.</li>
+<li><b>28 juny 1919</b> Tractat de Versalles.</li></ol></div>
+<div class="card must"><h3>🧠 Les idees que no pots oblidar</h3><ul>
+<li><b>Causes:</b> imperialisme + nacionalisme + rivalitat econòmica + blocs d'aliances + cursa d'armaments (pau armada).</li>
+<li><b>Tres rivalitats:</b> França-Alemanya, Alemanya-GB, Àustria-Rússia.</li>
+<li><b>Blocs:</b> Triple Aliança (Alemanya, Àustria-Hongria, Itàlia) vs Triple Entesa (França, Rússia, Regne Unit).</li>
+<li><b>Pla Schlieffen:</b> atacar França via Bèlgica i després Rússia. Fracassa al Marne.</li>
+<li><b>Trinxeres:</b> guerra de desgast; noves armes (gas, tancs, avions, submarins, metralladores).</li>
+<li><b>Reraguarda:</b> economia de guerra, intervenció de l'Estat, dona a les fàbriques, propaganda, censura.</li>
+<li><b>1917:</b> Rússia surt, EUA entren (per la guerra submarina).</li>
+<li><b>Versalles:</b> culpa d'Alemanya, reparacions, pèrdua de colònies, Alsàcia-Lorena, corredor de Danzig, desmilitarització.</li>
+<li><b>Desapareixen 4 imperis:</b> alemany, austrohongarès, rus i otomà.</li>
+<li><b>Societat de Nacions:</b> idea de Wilson, feble (sense EUA).</li>
+<li><b>Llavor de l'odi:</b> revisionisme alemany → 2a Guerra Mundial.</li></ul></div>
+<div class="card"><h3>✍️ Consells per a l'examen</h3><ul><li>Explica sempre la <b>relació causa-conseqüència</b> ("per això…", "com a conseqüència…").</li><li>Diferencia <b>causa estructural</b> (de fons) i <b>detonant</b> (Sarajevo).</li><li>Si et demanen un mapa: ubica els dos blocs i els nous estats de 1919.</li><li>Fes servir el vocabulari: pau armada, Weltpolitik, desgast, armistici, reparacions, revisionisme.</li></ul></div>
+</section>
+</main>
+
+<script>
+(function(){
+function $(s,c){return (c||document).querySelector(s)}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+function shuf(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1)),t=a[i];a[i]=a[j];a[j]=t}return a}
+function touchCompat(e){
+ var el=e.target;
+ while(el&&el!==document&&!(el.matches&&el.matches('button,[data-go],.flash'))){el=el.parentNode}
+ if(el&&el!==document){e.preventDefault();if(typeof el.click==='function')el.click()}
+}
+document.addEventListener('touchend',touchCompat,{passive:false});
+function show(id){$$('section').forEach(function(s){s.classList.toggle('on',s.id===id)});$$('#nav button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-s')===id)});window.scrollTo(0,0);if(id==='test')renderLvl()}
+$$('#nav button').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-s'))})});
+$$('[data-go]').forEach(function(t){t.addEventListener('click',function(){show(t.getAttribute('data-go'))})});
+
+var EV=[["a","1870-1871","Guerra francoprussiana. Neix l'Imperi alemany; França perd Alsàcia i Lorena."],["a","1879-1882","Aliança Alemanya–Àustria-Hongria; s'hi suma Itàlia → Triple Aliança."],["a","1892","Convenció militar franco-russa."],["a","1898","Incident de Fashoda (França-GB a Àfrica)."],["a","1904","Entesa Cordial França–Regne Unit."],["a","1905","1a crisi marroquina. Revolució russa de 1905."],["a","1907","Acord GB-Rússia → Triple Entesa."],["a","1908","Àustria annexiona Bòsnia-Hercegovina."],["a","1911","2a crisi marroquina."],["a","1912-1913","Guerres balcàniques."],["a","28 juny 1914","Atemptat de Sarajevo contra Francesc Ferran."],["a","23 juliol 1914","Ultimàtum austríac a Sèrbia."],["b","28 juliol 1914","Àustria-Hongria declara la guerra a Sèrbia."],["b","1-4 agost 1914","Alemanya declara la guerra a Rússia i França; invasió de Bèlgica; entra el Regne Unit."],["b","Agost 1914","Tannenberg: derrota russa."],["b","Setembre 1914","Batalla del Marne: fracàs del pla Schlieffen."],["b","Novembre 1914","L'Imperi otomà s'alia amb els Imperis Centrals."],["b","1915","Itàlia entra amb l'Entesa. Enfonsament del Lusitania."],["b","Setembre 1915","Conferència pacifista de Zimmerwald."],["b","Octubre 1915","Bulgària s'uneix als Imperis Centrals."],["b","Febrer-desembre 1916","Batalla de Verdun."],["b","Juliol-novembre 1916","Batalla del Somme."],["b","Agost 1916","Romania s'alia amb l'Entesa."],["b","Febrer 1917","Cau el tsarisme a Rússia."],["b","Abril 1917","Els EUA entren a la guerra."],["b","Octubre 1917","Revolució bolxevic."],["b","Gener 1918","14 punts de Wilson."],["b","Març 1918","Tractat de Brest-Litovsk: Rússia surt de la guerra."],["b","Març-juliol 1918","Últimes ofensives alemanyes (Batalla del Kàiser)."],["b","Set.-nov. 1918","Rendició de Bulgària, Turquia i Àustria-Hongria (3 nov.)."],["b","9 novembre 1918","Abdica Guillem II; República a Alemanya."],["b","11 novembre 1918","Armistici al vagó de Compiègne."],["c","Gener 1919","Conferència de París."],["c","28 juny 1919","Tractat de Versalles. Neix la Societat de Nacions."],["c","Setembre 1919","Tractat de Saint-Germain (Àustria)."],["c","1940","Hitler fa signar la rendició de França al mateix vagó de Compiègne."]];
+function tl(f){$('#tl').innerHTML=EV.filter(function(e){return f==='all'||e[0]===f}).map(function(e){return '<div class="ev '+e[0]+'"><div class="d">'+e[1]+'</div>'+e[2]+'</div>'}).join('')}
+tl('all');
+$$('#cf button').forEach(function(b){b.addEventListener('click',function(){$$('#cf button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');tl(b.getAttribute('data-f'))})});
+
+var P=[["Otto von Bismarck","Canceller alemany fins 1890. Sistema d'aliances per aïllar França; equilibri."],["Guillem II","Kàiser alemany. Weltpolitik; abdica el 9-XI-1918."],["Francesc Josep I","Emperador d'Àustria-Hongria (mor el 1916)."],["Francesc Ferran","Arxiduc hereu austríac assassinat a Sarajevo."],["Gavrilo Princip","Nacionalista serbi, autor de l'atemptat."],["Nicolau II","Últim tsar de Rússia (Romanov)."],["Raymond Poincaré","President de la III República francesa el 1914."],["Georges Clemenceau","Cap del govern francès a París 1919: dur amb Alemanya."],["Lloyd George","Primer ministre britànic 1916-1922."],["Woodrow Wilson","President dels EUA: 14 punts, Societat de Nacions."],["Vittorio Orlando","Representant d'Itàlia a París."],["Alfred von Schlieffen","Autor del pla d'atac alemany."],["Hindenburg i Ludendorff","Generals alemanys, vencedors a Tannenberg."],["Erich von Falkenhayn","General alemany; estratègia de desgast a Verdun."],["Philippe Pétain","General francès defensor de Verdun."],["Douglas Haig","General britànic al Somme."],["Lenin","Líder bolxevic; pau de Brest-Litovsk."],["Carles I","Últim emperador austríac; demana l'armistici."],["Karl Liebknecht","Socialista alemany pacifista (espartaquista)."]];
+var G=[["Pau armada","Període sense guerra però amb cursa d'armaments i tensió constant."],["Imperialisme","Domini de territoris i pobles per part de potències per raons econòmiques i polítiques."],["Paneslavisme","Moviment que defensa la unió dels pobles eslaus sota protecció russa."],["Realpolitik","Política d'equilibri de Bismarck."],["Weltpolitik","Política mundial expansionista de Guillem II."],["Ultimàtum","Exigència final abans de declarar la guerra."],["Unió Sagrada","Suport de tots els partits (també socialistes) al govern en guerra."],["Guerra de desgast","Estratègia d'esgotar els recursos humans i materials de l'enemic."],["Terra de ningú","Espai entre trinxeres enemigues."],["Economia de guerra","Producció dirigida per l'Estat cap a l'esforç bèl·lic."],["Bloqueig","Tall de les comunicacions marítimes de l'enemic."],["Armistici","Acord d'aturar els combats."],["Reparacions","Indemnitzacions que havia de pagar Alemanya."],["Revisionisme","Voluntat de canviar els tractats de pau."],["Principi de les nacionalitats","Dret de cada nació a tenir el seu estat (autodeterminació)."]];
+$('#tp').innerHTML='<tr><th>Personatge</th><th>Per què és important</th></tr>'+P.map(function(p){return '<tr><td><b>'+p[0]+'</b></td><td>'+p[1]+'</td></tr>'}).join('');
+$('#tg').innerHTML='<tr><th>Concepte</th><th>Definició</th></tr>'+G.map(function(p){return '<tr><td><b>'+p[0]+'</b></td><td>'+p[1]+'</td></tr>'}).join('');
+
+var F=G.concat([["28-VI-1914","Atemptat de Sarajevo"],["11-XI-1918","Armistici (Compiègne)"],["28-VI-1919","Tractat de Versalles"],["Pla Schlieffen","Atacar França via Bèlgica abans que Rússia mobilitzi"],["Brest-Litovsk","Pau entre Alemanya i la Rússia bolxevic (març 1918)"],["Triple Aliança","Alemanya, Àustria-Hongria, Itàlia"],["Triple Entesa","França, Rússia, Regne Unit"],["Per què entren els EUA?","Per la guerra submarina alemanya (1917)"],["4 imperis desapareguts","Alemany, austrohongarès, rus i otomà"]]),fi=0;
+function fr(){$('#fc').classList.remove('f');$('#ff').textContent=F[fi][0];$('#fb').textContent=F[fi][1];$('#fn').textContent=(fi+1)+' / '+F.length}
+$('#fc').addEventListener('click',function(){this.classList.toggle('f')});
+$('#fnext').addEventListener('click',function(){fi=(fi+1)%F.length;fr()});
+$('#fprev').addEventListener('click',function(){fi=(fi-1+F.length)%F.length;fr()});
+$('#fsh').addEventListener('click',function(){shuf(F);fi=0;fr()});fr();
+
+var Q={a:[
+["Quin territori va perdre França el 1871?",["Alsàcia i Lorena","Bòsnia","Silèsia","El Saar"],"Després de la guerra francoprussiana: origen de l'antagonisme franco-alemany."],
+["Quins països formaven la Triple Aliança?",["Alemanya, Àustria-Hongria i Itàlia","França, Rússia i GB","Alemanya, Turquia i Bulgària","Àustria, Rússia i Sèrbia"],"Creada per Bismarck (1879) i ampliada amb Itàlia (1882)."],
+["Quins països formaven la Triple Entesa?",["França, Rússia i Regne Unit","França, Itàlia i EUA","Rússia, Sèrbia i Bèlgica","GB, Alemanya i França"],"1892, 1904 (Entesa Cordial) i 1907."],
+["Qui va ser assassinat a Sarajevo?",["L'arxiduc Francesc Ferran","L'emperador Francesc Josep","El tsar Nicolau II","El Kàiser Guillem II"],"L'hereu austrohongarès, el 28 de juny de 1914."],
+["Qui va cometre l'atemptat?",["Gavrilo Princip, nacionalista serbi","Un anarquista francès","Un soldat rus","Un espia alemany"],""],
+["Què és la 'pau armada'?",["Període de tensió i cursa d'armaments sense guerra","Un tractat de 1919","La treva de Nadal","El desarmament d'Alemanya"],"Les potències s'armen per prevenir desequilibris."],
+["La Weltpolitik de Guillem II consistia en…",["Una política mundial expansionista","Mantenir l'equilibri europeu","Aïllar Rússia","Renunciar a les colònies"],"Substitueix la Realpolitik de Bismarck i inquieta GB."],
+["Quin país defensava una política paneslavista?",["Rússia","Alemanya","Itàlia","França"],"Donava suport als eslaus del sud, sobretot Sèrbia."],
+["Quin era el punt feble de la Triple Aliança?",["Itàlia","Alemanya","Àustria-Hongria","Turquia"],"Reivindicava territoris italians d'Àustria-Hongria."],
+["Què va passar el 1908?",["Àustria annexionà Bòsnia-Hercegovina","Va esclatar la guerra","Rússia i França s'aliaren","Es firmà Versalles"],"Crisi balcànica."],
+["Quina és una causa estructural de la guerra?",["Imperialisme i rivalitat econòmica","L'atemptat de Sarajevo","L'ultimàtum austríac","La invasió de Bèlgica"],"Sarajevo és el detonant, no una causa estructural."],
+["Què eren les 'Unions Sagrades'?",["El suport de tots els partits, també socialistes, a la guerra","Aliances militars","Tractats de pau","Moviments pacifistes"],"El sentiment nacional s'imposà a la consciència de classe."]],
+b:[
+["Què pretenia el pla Schlieffen?",["Derrotar França ràpid via Bèlgica i després Rússia","Bloquejar GB per mar","Atacar primer Rússia","Defensar Alemanya a les trinxeres"],"Evitar la guerra en dos fronts."],
+["Quina batalla va aturar l'avanç alemany el 1914?",["El Marne","Verdun","El Somme","Jutlàndia"],"Setembre 1914: fracàs del pla Schlieffen."],
+["Quina batalla va guanyar Alemanya contra Rússia el 1914?",["Tannenberg","Marne","Somme","Verdun"],"Uns 90.000 presoners russos."],
+["Quina estratègia va dominar el 1915-1916?",["La guerra de desgast a les trinxeres","La guerra llampec","La guerra de guerrilles","La guerra nuclear"],"Esgotar els recursos de l'enemic."],
+["Què era la terra de ningú?",["L'espai entre trinxeres enemigues","Una colònia alemanya","Una zona neutral a Suïssa","El territori del Saar"],""],
+["Quina batalla va plantejar Falkenhayn per desgastar França el 1916?",["Verdun","Somme","Marne","Tannenberg"],"Lloc simbòlic; 2,5 milions d'obusos."],
+["Quina d'aquestes NO és una arma nova de la 1a GM?",["La bomba atòmica","El tanc","El gas tòxic","L'avió de combat"],"La bomba atòmica és de la 2a GM."],
+["Per què els EUA van entrar a la guerra el 1917?",["Per la guerra submarina alemanya","Per l'atemptat de Sarajevo","Per defensar Rússia","Per conquerir colònies"],"Abril 1917."],
+["Quin tractat va treure Rússia de la guerra?",["Brest-Litovsk","Versalles","Saint-Germain","Londres"],"Març 1918, després de la revolució bolxevic."],
+["Com va canviar el paper de la dona?",["Es va incorporar massivament a la indústria","Va lluitar com a soldat al front","Va perdre el dret de vot","No va canviar res"],"Va afavorir l'emancipació femenina."],
+["Què va ser Zimmerwald (1915)?",["Una conferència socialista pacifista","Una batalla","Un tractat","Un tipus d'arma"],"Pau sense annexions ni indemnitzacions."],
+["Quan es va signar l'armistici?",["11 de novembre de 1918","28 de juny de 1919","28 de juliol de 1914","3 de març de 1918"],"Al vagó de Compiègne."],
+["Quin bàndol aplicà el bloqueig marítim?",["L'Entesa contra Alemanya","Alemanya contra França","Rússia contra Turquia","Itàlia contra Àustria"],"Gràcies a la seva superioritat naval."]],
+c:[
+["Quants morts va causar aproximadament la guerra?",["Uns 10 milions","Uns 100.000","Uns 60 milions","Uns 500.000"],""],
+["On es va negociar la pau el 1919?",["Conferència de París","Congrés de Viena","Conferència de Ialta","Berlín"],""],
+["Quin líder volia evitar la venjança i crear la Societat de Nacions?",["Wilson","Clemenceau","Lloyd George","Orlando"],"Els 14 punts."],
+["Quin líder volia culpar i castigar durament Alemanya?",["Clemenceau","Wilson","Lenin","Orlando"],"França havia patit molt la guerra."],
+["Quin tractat es va imposar a Alemanya?",["Versalles","Saint-Germain","Brest-Litovsk","Londres"],"28 de juny de 1919."],
+["Què NO va establir el Tractat de Versalles?",["Alemanya rep noves colònies","Reparacions de guerra","Alsàcia i Lorena per a França","Desmilitarització de Renània"],"Alemanya perd totes les colònies."],
+["Què era el corredor de Danzig?",["Sortida al mar de Polònia que separava la Prússia oriental","Una línia de trinxeres","Un canal britànic","Una frontera russa"],""],
+["Quin tractat va dissoldre Àustria-Hongria?",["Saint-Germain","Versalles","Londres","Brest-Litovsk"],""],
+["Quin nou estat neix de la unió de Sèrbia amb Croàcia i Eslovènia?",["Iugoslàvia","Txecoslovàquia","Albània","Romania"],""],
+["Per què va ser feble la Societat de Nacions?",["Els EUA no hi van entrar i no tenia exèrcit","Hi eren tots els països","Tenia massa soldats","La dirigia Alemanya"],"Aïllacionisme nord-americà."],
+["Quins quatre imperis van desaparèixer?",["Alemany, austrohongarès, rus i otomà","Britànic, francès, rus i alemany","Japonès, xinès, rus i otomà","Espanyol, alemany, rus i italià"],""],
+["Per què parlem de 'llavor de l'odi'?",["Alemanya considerà Versalles una imposició i volgué revisar-lo","Els EUA van atacar Europa","Rússia va guanyar la guerra","França va perdre territoris"],"Revisionisme → 2a GM."],
+["Quin símbol uneix 1918 i 1940?",["El vagó de Compiègne","La torre Eiffel","La catedral de Reims","El Lusitania"],"Hitler hi féu signar la rendició francesa."],
+["Quina potència va sortir reforçada econòmicament?",["Els EUA","França","Alemanya","Àustria"],"Esdevé la 1a potència econòmica."]]};
+var LBL={a:"A · Causes",b:"B · Fases",c:"C · Conseqüències",x:"Simulacre"};
+var store={};try{store=JSON.parse(localStorage.getItem('igm4eso')||'{}')||{}}catch(e){store={}}
+function save(){try{localStorage.setItem('igm4eso',JSON.stringify(store))}catch(e){}}
+function verdict(p){return p>=90?["🏆 Excel·lent: preparat/da per treure molt bona nota.","#2e8b4a"]:p>=75?["✅ Bé: repassa només els errors.","#5a9e3a"]:p>=50?["⚠️ Aprovat just: torna a llegir el bloc i repeteix el test.","#c99a2e"]:["❌ Encara no: estudia el bloc amb calma i usa les targetes.","#b03a2a"]}
+function renderLvl(){var h='',tot=0,n=0;['a','b','c','x'].forEach(function(k){var v=store[k],p=v?v.best:0;if(v){tot+=p;n++}h+='<div style="margin:6px 0"><div style="display:flex;justify-content:space-between;gap:8px"><span>'+LBL[k]+'</span><span>'+(v?p+'% (millor) · '+v.tries+' intents':'pendent')+'</span></div><div class="bar"><i style="width:'+p+'%;background:'+verdict(p)[1]+'"></i></div></div>'});
+var g=n?Math.round(tot/n):0;h+='<p class="res"><b>Preparació global: '+g+'%</b> — '+(n?verdict(g)[0]:'Fes almenys un test per obtenir el diagnòstic.')+'</p>';
+var weak=['a','b','c'].filter(function(k){return !store[k]||store[k].best<75});if(n&&weak.length)h+='<p class="small">📌 Prioritza: '+weak.map(function(k){return LBL[k]}).join(', ')+'</p>';$('#lvl').innerHTML=h}
+function run(k){var pool=[];
+if(k==='x'){['a','b','c'].forEach(function(s){shuf(Q[s].slice()).slice(0,7).forEach(function(q){pool.push({q:q,s:s})})});pool=shuf(pool).slice(0,20)}
+else{pool=shuf(Q[k].map(function(q){return {q:q,s:k}}))}
+var ans=0,ok=0,err={a:0,b:0,c:0},box=$('#qz');box.innerHTML='<h3>'+LBL[k]+' · '+pool.length+' preguntes</h3>';
+pool.forEach(function(it,i){var q=it.q,d=document.createElement('div');d.className='q';
+var opts=shuf(q[1].map(function(t,j){return {t:t,c:j===0}}));
+d.innerHTML='<p>'+(i+1)+'. '+q[0]+'</p>'+opts.map(function(o,j){return '<button type="button" class="opt" data-c="'+(o.c?1:0)+'">'+String.fromCharCode(65+j)+') '+o.t+'</button>'}).join('')+'<div class="exp">'+q[2]+'</div>';
+$$('.opt',d).forEach(function(b){b.addEventListener('click',function(){if(d.getAttribute('data-done'))return;d.setAttribute('data-done','1');ans++;var good=b.getAttribute('data-c')==='1';if(good)ok++;else err[it.s]++;b.classList.add(good?'ok':'ko');$$('.opt',d).forEach(function(x){if(x.getAttribute('data-c')==='1')x.classList.add('ok')});var e=$('.exp',d);e.innerHTML=(good?'✅ Correcte. ':'❌ Incorrecte. ')+e.innerHTML;e.classList.add('show');if(ans===pool.length)fin()})});
+box.appendChild(d)});
+var r=document.createElement('div');r.className='card';r.innerHTML='<span class="small">Respon totes les preguntes per veure el resultat.</span>';box.appendChild(r);
+function fin(){var p=Math.round(ok*100/pool.length),v=verdict(p),nota=(ok*10/pool.length).toFixed(1);var s=store[k]||{best:0,tries:0};s.tries++;if(p>s.best)s.best=p;store[k]=s;save();
+var h='<div class="res"><b>Resultat: '+ok+'/'+pool.length+' ('+p+'%) · Nota estimada: '+nota+'</b></div><div class="bar" style="margin:8px 0"><i style="width:'+p+'%;background:'+v[1]+'"></i></div><p>'+v[0]+'</p>';
+if(k==='x'){h+='<p><b>Errors per bloc:</b> Causes '+err.a+' · Fases '+err.b+' · Conseqüències '+err.c+'</p>';var w=['a','b','c'].sort(function(x,y){return err[y]-err[x]})[0];if(err[w]>0)h+='<p>📌 El teu punt feble: <b>'+LBL[w]+'</b>.</p>'}
+h+='<button type="button" class="btn p" data-r="1">🔁 Repetir</button> <button type="button" class="btn" data-u="1">⚡ Anar a Últim minut</button>';r.innerHTML=h;
+$('[data-r]',r).addEventListener('click',function(){run(k)});$('[data-u]',r).addEventListener('click',function(){show('ultim')});renderLvl();r.scrollIntoView({behavior:'smooth'})}
+box.scrollIntoView({behavior:'smooth'})}
+$$('[data-q]').forEach(function(b){b.addEventListener('click',function(){run(b.getAttribute('data-q'))})});
+renderLvl();
+})();
+</script>
+</body>
+</html>
